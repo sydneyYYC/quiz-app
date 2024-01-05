@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
+  <link href="styles.css" type="stylesheet"/>
+  <script src="app.js" defer></script>
 </head>
 <body>
   <main>
@@ -11,17 +13,18 @@
     <section>
       <h3 id="question"></h3>
       <div>
-        <p id="answer-1"></p>
+        <button id="answer-1"></button>
       </div>
       <div>
-        <p id="answer-2"></p>
+        <button id="answer-2"></button>
       </div>
       <div>
-        <p id="answer-3"></p>
+        <button id="answer-3"></button>
       </div>
       <div>
-        <p id="answer-4"></p>
+        <button id="answer-4"></button>
       </div>
+      <button id="nextbtn" onclick={nextQuestion()}></button>
     </section>
   </main>
 </body>
