@@ -13,18 +13,22 @@
     <section>
       <h3 id="question"></h3>
       <div>
-        <button id="answer-1"></button>
+        <button id="answer-1" onclick="{testCorrectness(0)}"></button>
       </div>
       <div>
-        <button id="answer-2"></button>
+        <button id="answer-2" onclick="{testCorrectness(1)}"></button>
       </div>
       <div>
-        <button id="answer-3"></button>
+        <button id="answer-3" onclick="{testCorrectness(2)}"></button>
       </div>
       <div>
-        <button id="answer-4"></button>
+        <button id="answer-4" onclick="{testCorrectness(3)}"></button>
       </div>
       <button id="nextbtn" onclick={nextQuestion()}></button>
+    </section>
+    <section>
+      <h4>Score:</h4>
+      <p id="display-score">0</p>
     </section>
   </main>
 </body>

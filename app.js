@@ -3,7 +3,7 @@
 // if right answer say "yes!"
 // if wrong answer say wrong
 // if right answer add to score tally
-// loop between questions and answers in an array
+// move between questions and answers after answering
 
 let questions = [
   {question : "What does art from this period mostly reflect?",
@@ -52,12 +52,26 @@ function startQuiz() {
     //next button appears
     document.querySelector("#nextbtn").innerHTML = "next"
   };
+  
+  // loads quiz on page load
+ startQuiz();
 
-  startQuiz()
-
+ function testCorrectness(i) {
+   if (questions[currentQuestion].answers[i].correct === true ) {
+     score++;
+     console.log(score);
+     document.getElementById("display-score").innerHTML = score
+    }
+    else {
+      console.log("wrong");
+    };
+    // this should disable the click function afterwards - but its not disabling anything lol
+  document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").onclick = null
+ };
+ // next button changes to next question
 function nextQuestion() {
   currentQuestion ++ ;
-  console.log(currentQuestion);
+
   startQuiz(currentQuestion);
   // if this is the last question, hide the next button
   if (currentQuestion === 3) {
