@@ -65,20 +65,45 @@ function startQuiz() {
     else {
       console.log("wrong");
     };
-    // this should disable the click function afterwards - but its not disabling anything lol
-  document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").onclick = null
+    // this disables all buttons after the answer is chosen TODO: make this into one line of selectors
+  document.getElementById("answer-1").disabled = true;
+  document.getElementById("answer-2").disabled = true;
+  document.getElementById("answer-3").disabled = true;
+  document.getElementById("answer-4").disabled = true;
  };
+
  // next button changes to next question
 function nextQuestion() {
   currentQuestion ++ ;
 
-  startQuiz(currentQuestion);
+  startQuiz();
   // if this is the last question, hide the next button
+  // i cant make it 4 because then it wont show (there arent 4 questions). if i make it 3 the game will end too early
   if (currentQuestion === 3) {
-    document.querySelector("#nextbtn").classList.add("hidden");
+    // trying to finish quiz at last question
+    console.log('currentQuestion');
+    document.querySelector("#nextbtn").innerHTML = "Finish"
+    // addEventListener(click, "#nextbtn");
+    //   finishQuiz();
+    
   };
+
+  // if (currentQuestion === 4){
+  //   finishQuiz();
+  // };
+  // this reenables all buttons for the next question TODO: also make this into one line of selectors
+  document.getElementById("answer-1").disabled = false;
+  document.getElementById("answer-2").disabled = false;
+  document.getElementById("answer-3").disabled = false;
+  document.getElementById("answer-4").disabled = false;
 };
 
-// document.querySelector("#next").addEventListener("click");
+function finishQuiz(){
+  // document.querySelector('#score-heading').innerHTML = "Final Score";
+  // document.querySelector('#finish').innerHTML = "Thanks for Playing";
+  console.log("finished")
+}
+
+// document.querySelector("#next").addEventListener("click"); TODO: add event handler here instead of onclick html
 
 
