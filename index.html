@@ -10,7 +10,7 @@
 <body>
   <main>
     <h2>Quiz Time!</h2>
-    <section>
+    <section id="quiz-box">
       <h3 id="question"></h3>
       <div>
         <button id="answer-1" onclick="{testCorrectness(0)}"></button>
@@ -24,7 +24,7 @@
       <div>
         <button id="answer-4" onclick="{testCorrectness(3)}"></button>
       </div>
-      <button id="nextbtn" onclick={nextQuestion()}></button>
+      <button id="nextbtn"></button>
     </section>
     <section>
       <h4 id="score-heading">Score:</h4>

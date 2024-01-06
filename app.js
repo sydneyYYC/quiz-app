@@ -38,9 +38,11 @@ answers: [
   {text: "Most people could not read", correct: true}
 ]}
 ];
-
+// score and question iterator
 let score = 0
 currentQuestion = 0
+// next button 
+nextButton = document.querySelector("#nextbtn") 
 // loop through these questions
 function startQuiz() {
     document.querySelector("#question").innerHTML = questions[currentQuestion].question;
@@ -50,8 +52,10 @@ function startQuiz() {
     document.querySelector("#answer-3").innerHTML = questions[currentQuestion].answers[2].text;
     document.querySelector("#answer-4").innerHTML = questions[currentQuestion].answers[3].text;
     //next button appears
-    document.querySelector("#nextbtn").innerHTML = "next"
+    nextButton.innerHTML = "next"
   };
+  
+  nextButton.addEventListener("click", nextQuestion);
   
   // loads quiz on page load
  startQuiz();
@@ -77,20 +81,13 @@ function nextQuestion() {
   currentQuestion ++ ;
 
   startQuiz();
-  // if this is the last question, hide the next button
-  // i cant make it 4 because then it wont show (there arent 4 questions). if i make it 3 the game will end too early
-  if (currentQuestion === 3) {
-    // trying to finish quiz at last question
-    console.log('currentQuestion');
-    document.querySelector("#nextbtn").innerHTML = "Finish"
-    // addEventListener(click, "#nextbtn");
-    //   finishQuiz();
+  if (currentQuestion >= 3) {
+    // finish quiz at last question
+    nextButton.innerHTML = "Finish";
+    nextButton.addEventListener("click", finishQuiz);
     
   };
-
-  // if (currentQuestion === 4){
-  //   finishQuiz();
-  // };
+  
   // this reenables all buttons for the next question TODO: also make this into one line of selectors
   document.getElementById("answer-1").disabled = false;
   document.getElementById("answer-2").disabled = false;
@@ -99,11 +96,10 @@ function nextQuestion() {
 };
 
 function finishQuiz(){
-  // document.querySelector('#score-heading').innerHTML = "Final Score";
-  // document.querySelector('#finish').innerHTML = "Thanks for Playing";
-  console.log("finished")
-}
-
-// document.querySelector("#next").addEventListener("click"); TODO: add event handler here instead of onclick html
+  document.querySelector('#score-heading').innerHTML = "Final Score";
+  document.querySelector('#finish').innerHTML = "Thanks for Playing";
+  console.log("finished");
+  document.getElementById('quiz-box').classList.add("hidden");
+};
 
 
