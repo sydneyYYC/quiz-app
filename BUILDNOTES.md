@@ -10,4 +10,7 @@ Add a 4th question that never gets shown b/c it will be changed into a "hidden" 
 
 I can see if i can load a final page that just displays score instead of the questions , maybe on a toggle?
 
-I dont want to change the data i am given too much, it seems hacky
+I dont want to change the data i am given too much, it seems hacky . 
+
+Now that medieval period is finished I want to move on to other periods, and a landing page.
+

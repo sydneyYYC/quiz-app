@@ -4,32 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
-  <link href="styles.css" type="stylesheet"/>
-  <script src="app.js" defer></script>
+  <link href="css/styles.css" type="stylesheet"/>
 </head>
 <body>
   <main>
-    <h2>Quiz Time!</h2>
-    <section id="quiz-box">
-      <h3 id="question"></h3>
+    <h2>Welcome to the Fine Art Quiz</h2>
+    <p>Pick a category to get started.</p>
+    <a href="med.html">
       <div>
-        <button id="answer-1" onclick="{testCorrectness(0)}"></button>
+        <h3>Medieval Period 500AD-1400</h3>
       </div>
+    </a>
+    <a>
       <div>
-        <button id="answer-2" onclick="{testCorrectness(1)}"></button>
+        <h3>The Renaissance (1400-1600) </h3>
       </div>
+    </a>
+    <a>
       <div>
-        <button id="answer-3" onclick="{testCorrectness(2)}"></button>
+        <h3>Rococo Period (1699-1780)</h3>
       </div>
+    </a>
+    <a>
       <div>
-        <button id="answer-4" onclick="{testCorrectness(3)}"></button>
+        <h3>Impressionism (1865-1885)</h3>
       </div>
-      <button id="nextbtn"></button>
-    </section>
-    <section>
-      <h4 id="score-heading">Score:</h4>
-      <p id="display-score">0</p>
-    </section>
+    </a>
   </main>
   <p id="finish"></p>
 </body>

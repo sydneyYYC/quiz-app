@@ -11,13 +11,13 @@ let questions = [
       {text: "Early Christian Church, the traditions of the Roman Empire and the Artistic Culture of Northern Europe", correct: true},
       {text: "Iconic Figures and Animals, bedazzled in jewels", correct: false},
       {text: "Weird Jesus Babies. Why do they look like that?", correct: false},
-      {text: "Ancient texts mixed with images of ordinary people", correct:false}
+      {text: "Ancient texts mixed with images of ordinary people", correct: false}
     ]
   },
   {question : "What was a popular symbol included in depictions of the Madonna and Child that the child is often seen doing?",
   answers: [
     {text: "An open palm", correct: false},
-    {text: "A sword", correct:false},
+    {text: "A sword", correct: false},
     {text: "A peace sign", correct: true},
     {text: "A golden ball", correct: false},
   ]
@@ -32,7 +32,7 @@ let questions = [
 },
 {question: "Why did art become so important for spreading information during the medieval period?",
 answers: [
-  {text: "Because art is super cool", correct:false},
+  {text: "Because art is super cool", correct: false},
   {text: "A surplus of paper, ink and excellent distribution", correct: false},
   {text: "It made the church look more powerful", correct: false},
   {text: "Most people could not read", correct: true}
@@ -67,7 +67,7 @@ function startQuiz() {
      document.getElementById("display-score").innerHTML = score
     }
     else {
-      console.log("wrong");
+      document.getElementById("wrong").innerHTML = "Oops! That's not right"
     };
     // this disables all buttons after the answer is chosen TODO: make this into one line of selectors
   document.getElementById("answer-1").disabled = true;
