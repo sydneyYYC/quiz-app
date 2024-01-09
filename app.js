@@ -43,6 +43,7 @@ let score = 0
 currentQuestion = 0
 // next button 
 nextButton = document.querySelector("#nextbtn") 
+returnBtn = document.querySelector("#return-btn")
 // loop through these questions
 function startQuiz() {
     document.querySelector("#question").innerHTML = questions[currentQuestion].question;
@@ -85,9 +86,11 @@ function nextQuestion() {
     // finish quiz at last question
     nextButton.innerHTML = "Finish";
     nextButton.addEventListener("click", finishQuiz);
+
     
   };
-  
+  // removes 'wrong' text for next question
+  document.getElementById("wrong").innerHTML = " "
   // this reenables all buttons for the next question TODO: also make this into one line of selectors
   document.getElementById("answer-1").disabled = false;
   document.getElementById("answer-2").disabled = false;
@@ -100,6 +103,7 @@ function finishQuiz(){
   document.querySelector('#finish').innerHTML = "Thanks for Playing";
   console.log("finished");
   document.getElementById('quiz-box').classList.add("hidden");
+  returnBtn.innerHTML = "Return to Main"
 };
 
 

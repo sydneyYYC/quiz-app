@@ -1,0 +1,116 @@
+/* stylesheet for the landing page */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* color theme */
+:root {
+  --white: #FFF2EA;
+  --brown: #FED9A2;
+  --orange: #FDBB71;
+  --red: #ED6F27;
+  --green: #14706B;
+}
+
+/* base css  */
+html {
+  background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+}
+#main {
+display: flex;
+flex-direction: column;
+justify-items: flex-start;
+margin: 2rem;
+margin-top: 4rem;
+margin-bottom: 1rem;
+font-size: 18px;
+width:auto;
+font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 2px;
+}
+
+/* user info and icon */
+.intro {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+/* high score display container*/
+.high-score {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  
+  padding: 0.5rem, 1rem;
+  border-radius: 15px;
+  line-height: 2px;
+  
+  color: var(--white);
+  background-color: var(--green);
+  font-weight: medium;
+}
+
+/* score words */
+.score {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 2px;
+  font-size: 20px;
+}
+
+/* score icon */
+.trophy {
+  margin-right: 2rem;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+}
+
+/* pick a quiz label */
+.label {
+  font-size: 20px;
+}
+
+/*container for quiz links */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* quiz link containers */
+.card {
+  background-color: var(--brown);
+  color: var(--red);
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* description of quiz */
+.card-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  display: block;
+  line-height: 5px;
+}
+
+/* hover effects on quiz links */
+a:hover {
+  background-color: var(--orange);
+}
+
+a {
+  text-decoration: none;
+  color: var(--red);
+}

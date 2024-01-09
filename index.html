@@ -3,34 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
   <title>Quiz App</title>
-  <link href="css/styles.css" type="stylesheet"/>
+  
 </head>
 <body>
-  <main>
-    <h2>Welcome to the Fine Art Quiz</h2>
-    <p>Pick a category to get started.</p>
-    <a href="med.html">
+  <main id="main">
+    <section class="intro">
       <div>
-        <h3>Medieval Period 500AD-1400</h3>
+        <h2>Hi There!</h2>
+        <p>Are you ready to learn today?</p>
       </div>
-    </a>
-    <a>
       <div>
-        <h3>The Renaissance (1400-1600) </h3>
+        icon
       </div>
-    </a>
-    <a>
-      <div>
-        <h3>Rococo Period (1699-1780)</h3>
+    </section>
+    <div class="high-score">
+      <div class="score">
+        <p>Highest Score</p>
+        <p>[score]</p>
       </div>
-    </a>
-    <a>
-      <div>
-        <h3>Impressionism (1865-1885)</h3>
+      <div class="trophy">
+        icon
       </div>
-    </a>
+    </div>
+      <section class="links">
+      <h5 class="label">Pick a quiz to start:</h5>
+      <a href="med.html" class="card">
+        <div class="card-text">
+          <h3>Medieval Period</h3>
+          <p>500AD-1400</p>
+        </div>
+      </a>
+      <a href="/" class="card">
+        <div class="card-text">
+          <h3>The Renaissance</h3>
+          <p>1400-1600</p>
+        </div>
+      </a>
+      <a href="/" class="card">
+        <div class="card-text">
+          <h3>Rococo Period</h3>
+          <p>1699-1780</p>
+        </div>
+      </a>
+      <a href="/" class="card">
+        <div class="card-text">
+          <h3>Impressionism</h3>
+          <p>1865-1885</p>
+        </div>
+      </a>
+    </section>
   </main>
-  <p id="finish"></p>
 </body>
 </html>

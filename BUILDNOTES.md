@@ -12,5 +12,7 @@ I can see if i can load a final page that just displays score instead of the que
 
 I dont want to change the data i am given too much, it seems hacky . 
 
+Note: need to add a "wrong" indicator
+
 Now that medieval period is finished I want to move on to other periods, and a landing page.
 
