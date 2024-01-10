@@ -25,3 +25,9 @@ now I am running each js questions array as separate files and importing these a
 This choice will cut down on code time and make it easier to add features as i only need to change 1 main file. 
 
 This will be majorly helpful in the future as i continue to work on this project. 
+
+TODO: import score using local storage 
+
+TODO: render score using import / export on index.html
+
+TODO: save score to local storage 

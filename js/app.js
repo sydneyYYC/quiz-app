@@ -119,7 +119,7 @@ function finishQuiz(){
   document.querySelector('#finish').innerHTML = "Thanks for Playing";
   document.getElementById("wrong").innerHTML = " " ;
   document.getElementById('quiz-box').classList.add("hidden");
-  returnBtn.innerHTML = "Return to Main"
+  returnBtn.innerHTML = "Return to Main";
 };
 
 // animates the progress bar to indicate how many questions left TODO: add ease or smoothing so its not so abrupt
