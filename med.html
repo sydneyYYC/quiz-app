@@ -4,26 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Section 1</title>
-  <link href="css/med.css" type="stylesheet"/>
+  <link href="css/med.css" rel="stylesheet"/>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <main>
+  <main class="main">
+    <h2 class="title">Medieval Period</h2>
+    <div id="progress-bar">
+    </div>
     <section id="quiz-box">
       <h3 id="question"></h3>
-      <div>
-        <button id="answer-1" onclick="{testCorrectness(0)}"></button>
+      <div class="buttons">
+        <div>
+          <button id="answer-1" onclick="{testCorrectness(0)}"></button>
+        </div>
+        <div>
+          <button id="answer-2" onclick="{testCorrectness(1)}"></button>
+        </div>
+        <div>
+          <button id="answer-3" onclick="{testCorrectness(2)}"></button>
+        </div>
+        <div>
+          <button id="answer-4" onclick="{testCorrectness(3)}"></button>
+        </div>
+        <button id="nextbtn"></button>
       </div>
-      <div>
-        <button id="answer-2" onclick="{testCorrectness(1)}"></button>
-      </div>
-      <div>
-        <button id="answer-3" onclick="{testCorrectness(2)}"></button>
-      </div>
-      <div>
-        <button id="answer-4" onclick="{testCorrectness(3)}"></button>
-      </div>
-      <button id="nextbtn"></button>
     </section>
     <section>
       <h4 id="wrong"></h4>
