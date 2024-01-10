@@ -23,13 +23,19 @@ h2 {
   line-height: 2px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
   margin: 3rem 2rem 1rem 2rem;
-  /* margin-top: 4rem;
-  margin-bottom: 1rem; */
   font-size: 18px;
   width: auto;
   font-family: 'Roboto', sans-serif;
@@ -44,12 +50,6 @@ h2 {
   justify-content: center;
 }
 
-#progress-bar {
-  width: 100%;
-  height: 0.5rem;
-  background-color: grey;
-  border-radius: 20px;
-}
 
 #question {
   font-size: 25px;
@@ -61,13 +61,105 @@ h2 {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
+
 button {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--brown);
+  background-color: var(--orange);
   border: none;
-  border-radius: 20px;
-  font-size: 18px;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
+  text-align: left;
+  height: 6rem;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+  font-stretch: semi-expanded;
+}
+
+button:hover {
+  background-color: var(--red);
+}
+
+/* next button */
+#nextbtn {
+  height: 3rem;
+  text-align: center;
+  background-color: var(--brown);
+}
+
+#nextbtn:hover {
+background-color: var(--green);
+}
+
+/* score box */
+#score-keeper {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 20px;
+  margin-top: 1.5rem;
+}
+
+/* score heading */
+#score-heading {
+margin-left: 0rem;
+}
+
+/* finish screen */
+
+#finish {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 2rem;
+  font-size: 25px;
+}
+
+#return-btn {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--orange);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin: 3rem 2rem 1rem 2rem;
+  text-align: left;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+  font-stretch: semi-expanded;
+  width:max-content;
+}
+
+#return-btn:hover {
+ background-color: var(--red);
+}
+
+
+/* progress bar */
+
+#progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: grey;
+  border-radius: 20px;
+  position: relative;
+}
+
+#barStatus {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #25F;
+}
+
+.correct {
+  background-color: var(--green);
+}
+
+.incorrect {
+  background: var(--red);
+}
+
+.grey {
+  background-color: grey;
 }
