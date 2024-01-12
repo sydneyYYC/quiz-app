@@ -78,10 +78,13 @@ button {
   font-stretch: semi-expanded;
 }
 
-button:hover {
+.answer:hover {
   background-color: var(--red);
 }
 
+.grey:hover {
+  background-color: grey;
+}
 /* next button */
 #nextbtn {
   height: 3rem;

@@ -14,19 +14,20 @@ returnBtn = document.querySelector("#return-btn")
 // loop through these questions
 function startQuiz() {
     document.querySelector("#question").innerHTML = questions[currentQuestion].question;
-
     document.querySelector("#answer-1").innerHTML = questions[currentQuestion].answers[0].text;
     document.querySelector("#answer-2").innerHTML = questions[currentQuestion].answers[1].text;
     document.querySelector("#answer-3").innerHTML = questions[currentQuestion].answers[2].text;
     document.querySelector("#answer-4").innerHTML = questions[currentQuestion].answers[3].text;
     //next button appears
     nextButton.innerHTML = "Next"
+    returnBtn.classList.add("hidden");
   };
   
   nextButton.addEventListener("click", nextQuestion);
-  
   // loads quiz on page load
  startQuiz();
+
+  
 
   // on answers click 
  function testCorrectness(i) {
@@ -43,12 +44,16 @@ function startQuiz() {
   document.getElementById("answer-2").disabled = true;
   document.getElementById("answer-3").disabled = true;
   document.getElementById("answer-4").disabled = true;
+  
+  document.getElementById("answer-1").classList.add("grey:hover");
 
     // adds a grey background to indicate the buttons are no longer clickable
   document.getElementById("answer-1").classList.add("grey");
   document.getElementById("answer-2").classList.add("grey");
   document.getElementById("answer-3").classList.add("grey");
   document.getElementById("answer-4").classList.add("grey");
+
+
  };
 
  // next button changes to next question
@@ -85,6 +90,7 @@ function finishQuiz(){
   document.querySelector('#finish').innerHTML = "Thanks for Playing";
   document.getElementById("wrong").innerHTML = " " ;
   document.getElementById('quiz-box').classList.add("hidden");
+  returnBtn.classList.remove("hidden");
   returnBtn.innerHTML = "Return to Main";
 };
 
@@ -111,6 +117,7 @@ function progressBar(i) {
       elem.style.width = '100%';
     }
   }
+
 };
 
 
