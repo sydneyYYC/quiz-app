@@ -71,9 +71,8 @@ h2 {
 /* score icon */
 .trophy {
   margin-right: 2rem;
-  width: 20px;
-  height: 20px;
-  background-color: var(--white);
+  width: 60px;
+  height: 60px;
 }
 
 /* pick a quiz label */
@@ -90,6 +89,9 @@ h2 {
 
 /* quiz link containers */
 .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--brown);
   color: var(--red);
   margin-bottom: 1rem;
@@ -97,6 +99,10 @@ h2 {
   border-radius: 15px;
 }
 
+.icon {
+  margin-right: 2rem;
+  width: 70px;
+}
 /* description of quiz */
 .card-text {
   padding-top: 1rem;
