@@ -5,36 +5,56 @@
 // if right answer add to score tally
 // move between questions and answers after answering
 
+export function updateAndExportScore(newScore) {
+  score = newScore;
+}
+
 // score and question iterator
 let score = 0
-currentQuestion = 0
+let currentQuestion = 0
 // next button 
-nextButton = document.querySelector("#nextbtn") 
-returnBtn = document.querySelector("#return-btn")
+const nextButton = document.querySelector("#nextbtn") 
+const returnBtn = document.querySelector("#return-btn")
+
 // loop through these questions
 function startQuiz() {
-    document.querySelector("#question").innerHTML = questions[currentQuestion].question;
-    document.querySelector("#answer-1").innerHTML = questions[currentQuestion].answers[0].text;
-    document.querySelector("#answer-2").innerHTML = questions[currentQuestion].answers[1].text;
-    document.querySelector("#answer-3").innerHTML = questions[currentQuestion].answers[2].text;
-    document.querySelector("#answer-4").innerHTML = questions[currentQuestion].answers[3].text;
-    //next button appears
-    nextButton.innerHTML = "Next"
-    returnBtn.classList.add("hidden");
+  document.querySelector("#question").innerHTML = questions[currentQuestion].question;
+  document.querySelector("#answer-1").innerHTML = questions[currentQuestion].answers[0].text;
+  document.querySelector("#answer-2").innerHTML = questions[currentQuestion].answers[1].text;
+  document.querySelector("#answer-3").innerHTML = questions[currentQuestion].answers[2].text;
+  document.querySelector("#answer-4").innerHTML = questions[currentQuestion].answers[3].text;
+  //next button appears
+  nextButton.innerHTML = "Next"
+  returnBtn.classList.add("hidden");
+
   };
   
-  nextButton.addEventListener("click", nextQuestion);
+  // event handlers
+  nextButton.addEventListener("click", e => {
+    nextQuestion();
+   });
+
+  document.querySelector("#answer-1").addEventListener("click", e => {
+   testCorrectness(0);
+  });
+  document.querySelector("#answer-2").addEventListener("click", e => {
+    testCorrectness(1);
+   });
+   document.querySelector("#answer-3").addEventListener("click", e => {
+    testCorrectness(2);
+   });
+   document.querySelector("#answer-4").addEventListener("click", e => {
+    testCorrectness(3);
+   });
+
   // loads quiz on page load
  startQuiz();
 
-  
-
   // on answers click 
- function testCorrectness(i) {
+  function testCorrectness(i) {
    if (questions[currentQuestion].answers[i].correct === true ) {
      score++;
      console.log(score);
-     document.getElementById("display-score").innerHTML = score
     }
     else {
       document.getElementById("wrong").innerHTML = "Oops! That's not right"
@@ -52,9 +72,10 @@ function startQuiz() {
   document.getElementById("answer-2").classList.add("grey");
   document.getElementById("answer-3").classList.add("grey");
   document.getElementById("answer-4").classList.add("grey");
+  
+  
+};
 
-
- };
 
  // next button changes to next question
 function nextQuestion() {
@@ -77,7 +98,7 @@ function nextQuestion() {
   document.getElementById("answer-2").disabled = false;
   document.getElementById("answer-3").disabled = false;
   document.getElementById("answer-4").disabled = false;
-
+  
   //this removes the grey to visually indicate the buttons are clickable again
   document.getElementById("answer-1").classList.remove("grey");
   document.getElementById("answer-2").classList.remove("grey");
@@ -87,12 +108,36 @@ function nextQuestion() {
 
 function finishQuiz(){
   document.querySelector('#score-heading').innerHTML = "Final Score";
+  document.getElementById("display-score").innerHTML = score
   document.querySelector('#finish').innerHTML = "Thanks for Playing";
   document.getElementById("wrong").innerHTML = " " ;
   document.getElementById('quiz-box').classList.add("hidden");
   returnBtn.classList.remove("hidden");
   returnBtn.innerHTML = "Return to Main";
+  updateAndExportScore();
 };
+
+
+
+// // Function to update and rename the score
+// function updateAndExportScore(newScore) {
+//   // Rename the score variable
+//   let renamedScore = newScore;
+
+//   // Other logic if needed
+
+//   // Export the renamed score
+//   return renamedScore;
+// }
+
+// export { updateAndExportScore };
+
+
+// export function passScore() {
+//   console.log(score);
+//   let newScore;
+//   score = newScore ; 
+// };
 
 // animates the progress bar to indicate how many questions left TODO: add ease or smoothing so its not so abrupt
 function progressBar(i) {

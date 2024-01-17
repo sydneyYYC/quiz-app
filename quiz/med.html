@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Section 1</title>
   <link href="/css/med.css" rel="stylesheet"/>
-  <script src="/js/med.js" defer></script>
-  <script src="/js/app.js" defer></script>
+  <script src="/js/med.js" defer ></script>
+  <script src="/js/app.js" type="module" defer></script>
 </head>
 <body>
   <main class="main">
     <h2 class="title">Medieval Period</h2>
     <section id="score-keeper">
-      <h4 id="score-heading">Score:</h4>
-      <p id="display-score">0</p>
+      <h4 id="score-heading"></h4>
+      <p id="display-score"></p>
     </section>
-    <h4 id="wrong"> </h4>
     <div id="progress-bar">
       <div id="barStatus"></div>
     </div>
+    <h4 id="wrong"> </h4>
     <section id="quiz-box">
       <h3 id="question"></h3>
       <div class="buttons">
-          <button class="answer" id="answer-1"></button>
+          <button class="answer" id="answer-1" ></button>
 
-          <button class="answer" id="answer-2" onclick="{testCorrectness(1)}"></button>
+          <button class="answer" id="answer-2" ></button>
 
-          <button class="answer" id="answer-3" onclick="{testCorrectness(2)}"></button>
+          <button class="answer" id="answer-3"></button>
 
-          <button class="answer" id="answer-4" onclick="{testCorrectness(3)}"></button>
+          <button class="answer" id="answer-4"></button>
 
           <button id="nextbtn"></button>
         </div>

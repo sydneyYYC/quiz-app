@@ -28,6 +28,30 @@ This will be majorly helpful in the future as i continue to work on this project
 
 TODO: import score using local storage 
 
+NOTE : BUG 
+
+i cannot use import/export unless my js file is described as module in the html
+this however breaks the code that uses inline onclick functions to test the correctness of the answer
+
+when i add a eventlistener it runs the function automatically if i call it as this: 
+
+```
+document.querySelector("#answer-1").addEventListener("click", testCorrectness(i));
+
+```
+
+HOWEVER i believe this is because i may need to nest my functions so it does not run on DOM upload but when clicked. 
+
+using this syntax 
+```
+document.querySelector("#answer-1").addEventListener("click", e => {
+  console.log('hello');
+  // testCorrectness(0);
+  });
+
+```
+
+i was able to achieve this, which was found by using this [video](https://www.youtube.com/watch?v=XF1_MlZ5l6M)
 TODO: render score using import / export on index.html
 
 TODO: save score to local storage 

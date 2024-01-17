@@ -6,7 +6,7 @@
   <title> Section 1</title>
   <link href="/css/med.css" rel="stylesheet"/>
   <script src="/js/rococo.js" defer></script>
-  <script src="/js/app.js" defer></script>
+  <script src="/js/app.js" type="module" defer></script>
 </head>
 <body>
   <main class="main">
@@ -17,13 +17,13 @@
     <section id="quiz-box">
       <h3 id="question"></h3>
       <div class="buttons">
-          <button class="answer" id="answer-1" onclick="{testCorrectness(0)}"></button>
+          <button class="answer" id="answer-1" ></button>
 
-          <button class="answer" id="answer-2" onclick="{testCorrectness(1)}"></button>
+          <button class="answer" id="answer-2" ></button>
 
-          <button class="answer" id="answer-3" onclick="{testCorrectness(2)}"></button>
+          <button class="answer" id="answer-3" ></button>
 
-          <button class="answer" id="answer-4" onclick="{testCorrectness(3)}"></button>
+          <button class="answer" id="answer-4" ></button>
 
           <button id="nextbtn"></button>
         </div>
