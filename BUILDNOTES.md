@@ -54,4 +54,7 @@ document.querySelector("#answer-1").addEventListener("click", e => {
 i was able to achieve this, which was found by using this [video](https://www.youtube.com/watch?v=XF1_MlZ5l6M)
 TODO: render score using import / export on index.html
 
+
+Having lots of trouble with this one :/ 
+
 TODO: save score to local storage 

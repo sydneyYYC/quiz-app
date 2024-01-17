@@ -5,10 +5,6 @@
 // if right answer add to score tally
 // move between questions and answers after answering
 
-export function updateAndExportScore(newScore) {
-  score = newScore;
-}
-
 // score and question iterator
 let score = 0
 let currentQuestion = 0
@@ -114,11 +110,19 @@ function finishQuiz(){
   document.getElementById('quiz-box').classList.add("hidden");
   returnBtn.classList.remove("hidden");
   returnBtn.innerHTML = "Return to Main";
-  updateAndExportScore();
+  // let score = newScore; 
+};
+function displayScore(newScore) {
+  let renamedScore = newScore; 
+  console.log("Final " + renamedScore);
+  document.getElementById("render-score").innerHTML = renamedScore;
 };
 
-
-
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.title === 'Quiz App') {
+    displayScore();
+  }
+});
 // // Function to update and rename the score
 // function updateAndExportScore(newScore) {
 //   // Rename the score variable

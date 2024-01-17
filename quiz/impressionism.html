@@ -7,32 +7,31 @@
   <link href="/css/med.css" rel="stylesheet"/>
   <script src="/js/impress.js" defer></script>
   <script src="/js/app.js" type="module" defer></script>
-</head>
-<body>
+</head><body>
   <main class="main">
     <h2 class="title">Impressionism</h2>
+    <section id="score-keeper">
+      <h4 id="score-heading"></h4>
+      <p id="display-score"></p>
+    </section>
     <div id="progress-bar">
       <div id="barStatus"></div>
     </div>
+    <h4 id="wrong"> </h4>
     <section id="quiz-box">
       <h3 id="question"></h3>
       <div class="buttons">
-          <button class="answer" id="answer-1"></button>
+          <button class="answer" id="answer-1" ></button>
 
-          <button id="answer-2" ></button>
+          <button class="answer" id="answer-2" ></button>
 
-          <button id="answer-3" ></button>
+          <button class="answer" id="answer-3"></button>
 
-          <button id="answer-4" ></button>
+          <button class="answer" id="answer-4"></button>
 
           <button id="nextbtn"></button>
         </div>
       </section>
-      <section id="score-keeper">
-        <h4 id="score-heading">Score:</h4>
-        <p id="display-score">0</p>
-      </section>
-      <h4 id="wrong"></h4>
   </main>
   <p id="finish"></p>
   <a href="/index.html"><h5 id="return-btn"></h5></a>
