@@ -35,7 +35,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
-  margin: 3rem 2rem 1rem 2rem;
+  margin: 3rem 2rem 2rem 2rem;
   font-size: 18px;
   width: auto;
   font-family: 'Roboto', sans-serif;
@@ -43,7 +43,7 @@ a {
   }
 
 .title {
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Roboto', sans-serif;
   font-style: medium;
   display: flex;
@@ -101,8 +101,7 @@ background-color: var(--green);
   justify-self: flex-end;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  font-size: 20px;
+  font-size: 1px;
   margin-top: 1.5rem;
 }
 
@@ -165,4 +164,8 @@ margin-left: 0rem;
 
 .grey {
   background-color: grey;
+}
+
+.test {
+  background-color: #25F;
 }

@@ -3,7 +3,7 @@
 let questions = [
   {question : "What does art from this period mostly reflect?",
     answers: [
-      {text: "Early Christian Church, the traditions of the Roman Empire and the Artistic Culture of Northern Europe", correct: true},
+      {text: "Early Christian Church and the Artistic Culture of Northern Europe", correct: true},
       {text: "Iconic Figures and Animals, bedazzled in jewels", correct: false},
       {text: "Weird Jesus Babies. Why do they look like that?", correct: false},
       {text: "Ancient texts mixed with images of ordinary people", correct: false}

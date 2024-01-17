@@ -8,6 +8,16 @@
 // score and question iterator
 let score = 0
 let currentQuestion = 0
+
+// export function updateAndExportScore(newScore) {
+//   score = newScore;
+
+//   // Save the score in localStorage
+//   localStorage.setItem('score', score);
+// };
+
+// console.log( questions[0].answers[0].correct );
+
 // next button 
 const nextButton = document.querySelector("#nextbtn") 
 const returnBtn = document.querySelector("#return-btn")
@@ -22,20 +32,20 @@ function startQuiz() {
   //next button appears
   nextButton.innerHTML = "Next"
   returnBtn.classList.add("hidden");
-
-  };
   
-  // event handlers
-  nextButton.addEventListener("click", e => {
-    nextQuestion();
-   });
+};
+  
+// event handlers
+nextButton.addEventListener("click", e => {
+  nextQuestion();
+});
 
   document.querySelector("#answer-1").addEventListener("click", e => {
    testCorrectness(0);
   });
   document.querySelector("#answer-2").addEventListener("click", e => {
     testCorrectness(1);
-   });
+  });
    document.querySelector("#answer-3").addEventListener("click", e => {
     testCorrectness(2);
    });
@@ -43,18 +53,30 @@ function startQuiz() {
     testCorrectness(3);
    });
 
-  // loads quiz on page load
+   // loads quiz on page load
  startQuiz();
 
-  // on answers click 
-  function testCorrectness(i) {
+ 
+ // on answers click 
+ function testCorrectness(i) {
    if (questions[currentQuestion].answers[i].correct === true ) {
      score++;
      console.log(score);
     }
     else {
-      document.getElementById("wrong").innerHTML = "Oops! That's not right"
+      document.getElementById("wrong").innerHTML = "Oops! That's not right";
     };
+  // iterates through all answers and determines what is true and what is false
+    for (let i = 0; i < 4; i++){
+      // console.log( questions[currentQuestion].answers[i].correct );
+      if (questions[currentQuestion].answers[i].correct === true) {
+        console.log("true!");
+        document.getElementsByClassName("answer"); 
+      }
+      else {
+        console.log ("false!")
+      };
+    }; 
     // this disables all buttons after the answer is chosen TODO: make this into one line of selectors
   document.getElementById("answer-1").disabled = true;
   document.getElementById("answer-2").disabled = true;
@@ -112,17 +134,17 @@ function finishQuiz(){
   returnBtn.innerHTML = "Return to Main";
   // let score = newScore; 
 };
-function displayScore(newScore) {
-  let renamedScore = newScore; 
-  console.log("Final " + renamedScore);
-  document.getElementById("render-score").innerHTML = renamedScore;
-};
+// function displayScore(newScore) {
+//   let renamedScore = newScore; 
+//   console.log("Final " + renamedScore);
+//   document.getElementById("render-score").innerHTML = renamedScore;
+// };
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (document.title === 'Quiz App') {
-    displayScore();
-  }
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (document.title === 'Quiz App') {
+//     displayScore();
+//   }
+// });
 // // Function to update and rename the score
 // function updateAndExportScore(newScore) {
 //   // Rename the score variable

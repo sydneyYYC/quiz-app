@@ -1,12 +1,12 @@
-let score;
+// let score;
 
-export function initializeScore(initialValue) {
-  score = initialValue;
-}
+// export function initializeScore(initialValue) {
+//   score = initialValue;
+// }
 
-export function getScore() {
-  return score;
-}
+// export function getScore() {
+//   return score;
+// }
 
 
 // // otherFile.js

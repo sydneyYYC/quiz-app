@@ -1,3 +1,17 @@
+// Import the updateAndExportScore function from app.js
+import { updateAndExportScore } from '/js/app.js';
+
+// Check if the score is saved in localStorage
+let savedScore = localStorage.getItem('score');
+
+if (savedScore !== null) {
+  // Use the saved score
+  console.log('Score from localStorage:', savedScore);
+} else {
+  console.log('Score not found in localStorage');
+};
+
+
 // import { updateAndExportScore } from './js/app.js';
 
 // // Call the function to update and export the score
