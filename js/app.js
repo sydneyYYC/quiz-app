@@ -1,30 +1,9 @@
-// 1 get question to populate
-// 2 get answers to populate
-// if right answer say "yes!"
-// if wrong answer say wrong
-// if right answer add to score tally
-// move between questions and answers after answering
-
-// score and question iterator
-// import { score } from 'another.js'
-// let score = 0
-// access score from local storage 
-// localStorage.setItem('score', score);
-// export function updateAndExportScore(newScore) {
-//   score = newScore;
-
-//   // Save the score in localStorage
-//   localStorage.setItem('score', score);
-// };
-
-// console.log( questions[0].answers[0].correct );
-
-// let score;
+// access score and set question iterator
 let score = parseInt(localStorage.getItem('score')) || 0;
 let currentQuestion = 0
 
 
-// next button 
+// next button and return button variables
 const nextButton = document.querySelector("#nextbtn") 
 const returnBtn = document.querySelector("#return-btn")
 
@@ -69,8 +48,18 @@ nextButton.addEventListener("click", e => {
   // let score = parseInt(localStorage.getItem('score')) || 0;
    if (questions[currentQuestion].answers[i].correct === true ) {
      score++;
-     localStorage.setItem('score', score);
-     console.log(score);
+     let highestScore = parseInt(localStorage.getItem('highestScore')) || 0;
+     
+     // Update the highest score if the current score is higher
+     if (score > highestScore) {
+       highestScore = score;
+       // Store the updated highest score in local storage
+       localStorage.setItem('highestScore', highestScore);
+      };
+      localStorage.setItem('score', score);
+
+      console.log('Current Score:', score);
+      console.log('Highest Score:', highestScore);
     }
     else {
       document.getElementById("wrong").innerHTML = "Oops! That's not right";
@@ -141,41 +130,11 @@ function finishQuiz(){
   document.getElementById('quiz-box').classList.add("hidden");
   returnBtn.classList.remove("hidden");
   returnBtn.innerHTML = "Return to Main";
-  
+
   localStorage.setItem('score', score);
   console.log('Updated Score:', score);
   // let score = newScore; 
 };
-// function displayScore(newScore) {
-//   let renamedScore = newScore; 
-//   console.log("Final " + renamedScore);
-//   document.getElementById("render-score").innerHTML = renamedScore;
-// };
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   if (document.title === 'Quiz App') {
-//     displayScore();
-//   }
-// });
-// // Function to update and rename the score
-// function updateAndExportScore(newScore) {
-//   // Rename the score variable
-//   let renamedScore = newScore;
-
-//   // Other logic if needed
-
-//   // Export the renamed score
-//   return renamedScore;
-// }
-
-// export { updateAndExportScore };
-
-
-// export function passScore() {
-//   console.log(score);
-//   let newScore;
-//   score = newScore ; 
-// };
 
 // animates the progress bar to indicate how many questions left TODO: add ease or smoothing so its not so abrupt
 function progressBar(i) {
