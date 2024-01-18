@@ -90,6 +90,7 @@ button {
   height: 3rem;
   text-align: center;
   background-color: var(--brown);
+  margin-bottom: 2rem;
 }
 
 #nextbtn:hover {
@@ -154,11 +155,11 @@ margin-left: 0rem;
   background-color: #25F;
 }
 
-.correct {
+.correct-answer {
   background-color: var(--green);
 }
 
-.incorrect {
+.incorrect-answer {
   background: var(--red);
 }
 
@@ -166,6 +167,3 @@ margin-left: 0rem;
   background-color: grey;
 }
 
-.test {
-  background-color: #25F;
-}

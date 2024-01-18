@@ -45,7 +45,6 @@ nextButton.addEventListener("click", e => {
  
  // on answers click 
  function testCorrectness(i) {
-  // let score = parseInt(localStorage.getItem('score')) || 0;
    if (questions[currentQuestion].answers[i].correct === true ) {
      score++;
      let highestScore = parseInt(localStorage.getItem('highestScore')) || 0;
@@ -64,17 +63,6 @@ nextButton.addEventListener("click", e => {
     else {
       document.getElementById("wrong").innerHTML = "Oops! That's not right";
     };
-  // iterates through all answers and determines what is true and what is false
-    for (let i = 0; i < 4; i++){
-      // console.log( questions[currentQuestion].answers[i].correct );
-      if (questions[currentQuestion].answers[i].correct === true) {
-        console.log("true!");
-        document.getElementsByClassName("answer"); 
-      }
-      else {
-        console.log ("false!")
-      };
-    }; 
     // this disables all buttons after the answer is chosen TODO: make this into one line of selectors
   document.getElementById("answer-1").disabled = true;
   document.getElementById("answer-2").disabled = true;
@@ -89,9 +77,33 @@ nextButton.addEventListener("click", e => {
   document.getElementById("answer-3").classList.add("grey");
   document.getElementById("answer-4").classList.add("grey");
   
-  
+  // addClassIndicators()
 };
 
+// WORK IN PROGRESS - adding classes to the right and wrong answers after answering
+
+// function addClassIndicators() {
+//   // iterates through all answers and determines what is true and what is false
+//     for (let i = 0; i < 4; i++){
+//       // console.log( questions[currentQuestion].answers[i].correct );
+//       // uses the iterator + answer # to inspect each answer 
+//       const answerId = "answer-" + (i + 1);
+//       const answerElement = document.getElementById(answerId);
+      
+//       if (answerElement) {
+//         if (questions[currentQuestion].answers[i].correct === true) {
+//         answerElement.classList.add("correct-answer");
+//         // document.getElementById("answer-" + (i + 1)).classList.add("correct-answer");
+//         console.log("true!");
+//       }
+//       else {
+//         console.log ("false!");
+//         answerElement.classList.add("incorrect-answer");
+//         // document.getElementById("answer-" + (i + 1)).classList.add("incorrect-answer");
+//       };
+//     }; 
+//   };
+// };
 
  // next button changes to next question
 function nextQuestion() {
