@@ -61,6 +61,8 @@ h2 {
 
 /* score words */
 .score {
+  display: flex;
+  gap: 2rem;
   margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
