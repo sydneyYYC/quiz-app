@@ -6,9 +6,10 @@
 // move between questions and answers after answering
 
 // score and question iterator
-let score = 0
-let currentQuestion = 0
-
+// import { score } from 'another.js'
+// let score = 0
+// access score from local storage 
+// localStorage.setItem('score', score);
 // export function updateAndExportScore(newScore) {
 //   score = newScore;
 
@@ -18,12 +19,18 @@ let currentQuestion = 0
 
 // console.log( questions[0].answers[0].correct );
 
+// let score;
+let score = parseInt(localStorage.getItem('score')) || 0;
+let currentQuestion = 0
+
+
 // next button 
 const nextButton = document.querySelector("#nextbtn") 
 const returnBtn = document.querySelector("#return-btn")
 
 // loop through these questions
 function startQuiz() {
+  
   document.querySelector("#question").innerHTML = questions[currentQuestion].question;
   document.querySelector("#answer-1").innerHTML = questions[currentQuestion].answers[0].text;
   document.querySelector("#answer-2").innerHTML = questions[currentQuestion].answers[1].text;
@@ -32,7 +39,7 @@ function startQuiz() {
   //next button appears
   nextButton.innerHTML = "Next"
   returnBtn.classList.add("hidden");
-  
+
 };
   
 // event handlers
@@ -59,8 +66,10 @@ nextButton.addEventListener("click", e => {
  
  // on answers click 
  function testCorrectness(i) {
+  // let score = parseInt(localStorage.getItem('score')) || 0;
    if (questions[currentQuestion].answers[i].correct === true ) {
      score++;
+     localStorage.setItem('score', score);
      console.log(score);
     }
     else {
@@ -132,6 +141,9 @@ function finishQuiz(){
   document.getElementById('quiz-box').classList.add("hidden");
   returnBtn.classList.remove("hidden");
   returnBtn.innerHTML = "Return to Main";
+  
+  localStorage.setItem('score', score);
+  console.log('Updated Score:', score);
   // let score = newScore; 
 };
 // function displayScore(newScore) {
